@@ -7,36 +7,40 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;color:#2b2226;background:#fffaf8}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eadbd7;background:#fffaf8}
+body{margin:0;font-family:Arial,sans-serif;color:#302529;background:#fffaf8}
+header{position:sticky;top:0;z-index:10;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#fffaf8ee;border-bottom:1px solid #eadbd7}
 .logo{font-weight:bold;letter-spacing:3px}
-nav a{margin-left:22px;text-decoration:none;color:#2b2226}
-.hero{min-height:80vh;padding:80px 8%;display:flex;align-items:center;justify-content:space-between;gap:50px;background:linear-gradient(135deg,#fffaf8,#f4e2df)}
-.hero-text{max-width:600px}
-.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:12px;color:#9b5965;font-weight:bold}
-h1{font-family:Georgia,serif;font-size:clamp(55px,9vw,100px);font-weight:normal;margin:15px 0}
-h2{font-family:Georgia,serif;font-size:48px;font-weight:normal}
-em{color:#9b5965}
-p{font-size:18px;line-height:1.8}
-.button{display:inline-block;margin-top:20px;padding:14px 25px;border-radius:30px;background:#9b5965;color:white;text-decoration:none;font-weight:bold}
-.photo{width:360px;height:470px;background:#ead8d5;display:flex;align-items:center;justify-content:center;text-align:center;color:#795d63;box-shadow:0 20px 50px #0002}
-.section{padding:90px 10%;max-width:1100px;margin:auto}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.quote{font-family:Georgia,serif;font-size:32px;padding:30px;border-left:4px solid #9b5965}
-.book{background:#f5e8e5;padding:90px 10%;display:grid;grid-template-columns:330px 1fr;gap:70px;align-items:center}
-.cover{height:470px;background:#d7b7b3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 20px 50px #0002}
-.cover strong{font-family:Georgia,serif;font-size:42px;line-height:1.1}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.gallery div{height:250px;background:#ead8d5;display:flex;align-items:center;justify-content:center;color:#795d63}
-.support{text-align:center;background:#2b2226;color:white;padding:90px 10%}
+nav a{margin-left:18px;text-decoration:none;color:#302529;font-size:14px}
+.hero{min-height:88vh;padding:80px 8%;display:flex;align-items:center;justify-content:space-between;gap:60px;background:linear-gradient(135deg,#fffaf8,#f1dedc)}
+.hero-text{max-width:620px}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:#985865;font-weight:bold}
+h1,h2,h3{font-family:Georgia,serif}
+h1{font-size:clamp(55px,9vw,100px);font-weight:normal;margin:15px 0}
+h2{font-size:clamp(38px,6vw,58px);font-weight:normal;margin:15px 0 25px}
+h3{font-size:28px}
+em{color:#985865}
+p{font-size:17px;line-height:1.8}
+.button{display:inline-block;margin-top:18px;padding:15px 27px;border-radius:30px;background:#985865;color:white;text-decoration:none;font-weight:bold}
+.photo-placeholder{width:370px;height:500px;background:#e5cfcc;display:flex;align-items:center;justify-content:center;text-align:center;color:#74565d;box-shadow:0 25px 60px #0002}
+.section{padding:100px 9%;max-width:1150px;margin:auto}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.quote{font-family:Georgia,serif;font-size:31px;padding:35px;border-left:4px solid #985865}
+.book{background:#f3e3e0;padding:100px 9%;display:grid;grid-template-columns:340px 1fr;gap:75px;align-items:center}
+.cover-placeholder{height:490px;background:#d6b5b2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;box-shadow:0 25px 60px #0002}
+.cover-placeholder strong{font-family:Georgia,serif;font-size:43px;line-height:1.1}
+.about{background:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-box{height:280px;background:#ead8d5;display:flex;align-items:center;justify-content:center;text-align:center;color:#795d63}
+.faith{text-align:center;background:#f7ebe9}
+.support{text-align:center;background:#302529;color:white;padding:100px 9%}
 footer{text-align:center;padding:35px;color:#777;border-top:1px solid #eadbd7}
 @media(max-width:750px){
 nav{display:none}
-.hero{flex-direction:column;text-align:center}
-.photo{width:85%;height:400px}
-.grid,.book{grid-template-columns:1fr}
+.hero{flex-direction:column;text-align:center;padding-top:60px}
+.photo-placeholder{width:90%;height:420px}
+.story,.book{grid-template-columns:1fr}
+.book{padding:75px 8%}
 .gallery{grid-template-columns:1fr}
-.book{padding:70px 8%}
 }
 </style>
 </head>
@@ -48,23 +52,25 @@ nav{display:none}
 <nav>
 <a href="#story">Her Story</a>
 <a href="#book">The Book</a>
+<a href="#about">About</a>
 <a href="#gallery">Gallery</a>
-<a href="#support">Support</a>
 </nav>
 </header>
 
 <section class="hero">
 <div class="hero-text">
-<div class="eyebrow">A Story of Faith, Strength & Survival</div>
+<div class="eyebrow">A Story of Faith • Strength • Survival</div>
 <h1>Meet <em>Miracle.</em></h1>
-<p>A little girl whose journey became a testimony of courage, love, faith and hope.</p>
-<a class="button" href="#book">Explore Her Story</a>
+<p>
+A little girl whose journey became a testimony of courage, love, faith and hope.
+</p>
+<a class="button" href="#story">Discover Her Story</a>
 </div>
 
-<div class="photo">
+<div class="photo-placeholder">
 <div>
-<strong>Miracle's Photo</strong><br>
-Add her beautiful photo here
+<strong>Miracle's Photo</strong><br><br>
+Her beautiful photo will be added here.
 </div>
 </div>
 </section>
@@ -73,11 +79,19 @@ Add her beautiful photo here
 <div class="eyebrow">Her Journey</div>
 <h2>A story that deserves to be remembered.</h2>
 
-<div class="grid">
+<div class="story">
 <div>
-<p>Miracle's story is one of survival, resilience and the power of love. After a life-changing tragedy, her family faced a long road through hospitalization, rehabilitation, caregiving and healing.</p>
+<p>
+Miracle's story is one of survival, resilience and unconditional love.
+After a life-changing tragedy, her family faced hospitalization, rehabilitation,
+caregiving, uncertainty and countless moments of prayer.
+</p>
 
-<p>This website is a place to celebrate Miracle's life, preserve her memories and share the message of hope behind her journey.</p>
+<p>
+Through every difficult moment, Miracle continued to show strength.
+Her journey became a reminder that even in the darkest moments,
+hope can remain.
+</p>
 </div>
 
 <div class="quote">
@@ -88,7 +102,7 @@ Her name is Miracle.”
 </section>
 
 <section id="book" class="book">
-<div class="cover">
+<div class="cover-placeholder">
 <strong>MIRACLE<br>SURVIVOR</strong>
 <p>Destiny Robinson</p>
 </div>
@@ -96,16 +110,34 @@ Her name is Miracle.”
 <div>
 <div class="eyebrow">The Book</div>
 <h2><em>Miracle Survivor</em></h2>
-<p><strong>By Destiny Robinson</strong></p>
+<p><strong>Written by Destiny Robinson</strong></p>
 
 <p>
-Miracle Survivor tells the story of Miracle's journey through tragedy, rehabilitation, caregiving, faith and healing — and the moments that reminded her family just how strong she is.
+Miracle Survivor shares Miracle's journey through tragedy, rehabilitation,
+caregiving, faith and healing. It is a story about a mother's love,
+a child's strength and the hope that carried a family forward.
 </p>
 
 <a class="button" href="https://a.co/d/07eCgsAE" target="_blank">
-Find the Book on Amazon
+Buy Miracle Survivor
 </a>
 </div>
+</section>
+
+<section id="about" class="section about">
+<div class="eyebrow">The Author</div>
+<h2>About Destiny Robinson</h2>
+
+<p>
+Destiny Robinson is Miracle's mother and the author of <em>Miracle Survivor</em>.
+She shares their journey to preserve Miracle's story, honor every step of her
+survival and give hope to families facing their own difficult seasons.
+</p>
+
+<p>
+This website was created to celebrate Miracle, document her journey and give
+everyone who has supported her family a place to follow her story.
+</p>
 </section>
 
 <section id="gallery" class="section">
@@ -113,17 +145,27 @@ Find the Book on Amazon
 <h2>Miracle's Gallery</h2>
 
 <div class="gallery">
-<div>Miracle Photo</div>
-<div>Miracle Photo</div>
-<div>Miracle Photo</div>
+<div class="gallery-box">Miracle's Photo<br><small>Coming soon</small></div>
+<div class="gallery-box">Miracle's Photo<br><small>Coming soon</small></div>
+<div class="gallery-box">Miracle's Photo<br><small>Coming soon</small></div>
 </div>
 </section>
 
-<section id="support" class="support">
-<div class="eyebrow">Be Part of the Journey</div>
+<section class="section faith">
+<div class="eyebrow">Faith & Hope</div>
+<h2>Keep believing in miracles.</h2>
+<p>
+Every step of Miracle's journey has been surrounded by love, prayer,
+strength and hope.
+</p>
+</section>
+
+<section class="support">
+<div class="eyebrow">Thank You</div>
 <h2>Thank you for standing with Miracle.</h2>
 <p>
-Thank you to everyone who has prayed for Miracle, supported her family and followed her journey.
+To every person who prayed, encouraged, supported and believed in Miracle:
+thank you.
 </p>
 </section>
 
@@ -134,4 +176,3 @@ Thank you to everyone who has prayed for Miracle, supported her family and follo
 
 </body>
 </html>
-
